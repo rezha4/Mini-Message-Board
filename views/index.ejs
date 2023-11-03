@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
-</head>
-<body>
-    <h1>Hi</h1>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Message Board</title>
+  </head>
+  <body>
+    <h1>Welcome to Mini Message Board</h1>
+    <button><a href="/new">Add New Message</a></button>
+    <ul>
+      <% messages.forEach(function(message){ %>
+      <li>
+        <strong><%= message.user %></strong>: <%= message.text %>
+        <br><small><%= message.added %></small>
+      </li>
+      <% }) %>
+    </ul>
+  </body>
 </html>
